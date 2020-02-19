@@ -1,0 +1,85 @@
+
+header{
+	width: 439px;
+    height: 564px;
+	border:2px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 10% auto;
+}
+body{
+	background-image: linear-gradient(to right top, #ee1a93, #fa375b, #eb6329, #ca8800, #9ea300, #94aa00, #87b200, #77b900, #9db200, #bea900, #db9e00, #f49212);
+	animation-name: third;
+	animation-duration: 2s;
+	animation-delay: 1.5s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+.square{
+	width: 62.5px;
+	height: 62.5px;
+	border:0.08px solid black;
+}
+.square:nth-child(2n){
+	background-color: black;
+}
+.square:nth-child(odd){
+	background-color: white;
+}
+.red,.green{
+	width: 62px;
+	height: 62px;
+	border-radius: 100%;
+	position: absolute;
+}
+.red{
+	top:0;
+	left: 0;
+	background-color: red;
+	animation-name: first;
+	animation-duration: 4s;
+	animation-delay: 1.5s;
+	animation-timing-function: steps(2);
+	animation-fill-mode: forwards;
+
+}
+.green{
+	background-color: green;
+	top: 502px;
+    left: 377px;
+    animation-name: second;
+	animation-duration: 4s;
+	animation-delay: 1.5s;
+	animation-timing-function: steps(2);
+	animation-fill-mode: forwards;
+}
+@keyframes first{
+
+	0%{
+		top: 126px;
+		left: 0px;
+	}
+	100%{
+		top: 126px;
+		left: 126px;
+	}
+}
+@keyframes second{
+	0%{
+		top:376px;
+		left: 377px;
+	}
+	100%{
+		top: 376px;
+		left: 251px;
+	}
+}
+@keyframes third{
+
+	100%{
+		background-image: linear-gradient(to bottom, #6f62c2, #8655a9, #914a8f, #934377, #8f3f61, #924052, #914444, #8d4938, #8c562b, #846422, #757323, #5e8131);
+	}
+}
+
+
